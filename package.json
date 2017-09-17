@@ -1,0 +1,50 @@
+{
+    "name": "ojhelper",
+    "displayName": "OJHelper",
+    "description": "A visual studio code extension to help submit code on online judgement platforms.",
+    "version": "0.0.1",
+    "publisher": "huajistudio",
+    "engines": {
+        "vscode": "^1.16.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.sayHello"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.sayHello",
+                "title": "Hello World"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HuajiStudio/OJHelper.git"
+    },
+    "bugs": {
+        "url": "https://github.com/HuajiStudio/OJHelper/issues"
+    },
+    "homepage": "https://github.com/HuajiStudio/OJHelper#readme",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.5.2",
+        "vscode": "^1.1.5",
+        "mocha": "^3.5.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "openjudge-helper": "^1.0.0"
+    }
+}
